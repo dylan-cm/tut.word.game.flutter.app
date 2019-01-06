@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:random_words/random_words.dart';
 
-class Words extends StatelessWidget{
+class RandomNoun extends StatelessWidget{
+  final noun = WordNoun.random();
+
   Widget build (BuildContext context){
     return Scaffold(
         appBar: AppBar(
@@ -9,7 +11,7 @@ class Words extends StatelessWidget{
         ),
         body: Center(
           child: Text(
-            'Noun: '
+            'Noun: ${noun.asCapitalized}'
           ),
         ),
       );
